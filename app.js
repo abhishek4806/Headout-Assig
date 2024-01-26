@@ -5,6 +5,10 @@ const path = require('path');
 const app = express();
 const port = 8080;
 
+app.get('/', async (req, res) => {
+  res.send("Server is up and running!!!")
+});
+
 app.get('/data', async (req, res) => {
   const { n, m } = req.query;
   
